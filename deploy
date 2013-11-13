@@ -1,0 +1,20 @@
+#!/bin/bash
+DEPLOY_BRANCH="master"
+DEPLOY_ORIGIN="git@github.com:Zeeraw/zeeraw.github.io.git"
+DEPLOY_PATH="./_site"
+echo "About to deploy '$DEPLOY_PATH' to $DEPLOY_ORIGIN on $DEPLOY_BRANCH"
+read -p "Message to add with your deploy: " commit_message
+
+#################
+cd $DEPLOY_PATH
+rm -Rf .git
+git init
+git remote add origin $DEPLOY_ORIGIN
+git add .
+git commit -m "$commit_message"
+git push origin $DEPLOY_BRANCH --force
+rm -Rf .git
+cd ../
+#################
+
+echo "Finished deploy!"
