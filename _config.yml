@@ -1,0 +1,19 @@
+name: My Little Visuals
+description: "Aspiring visual effects artist, studying Television and Media at Lerums in Sweden."
+
+source: ./_source
+layouts: ../_layouts # Must be relative to source
+plugins: ./_plugins
+destination: ./_site
+
+exclude: ['*.sass']
+keep_files: ['.git']
+
+markdown: redcarpet
+pygments: true
+safe: false
+
+sass:
+  style: expanded  # nested|expanded|compact|compressed
+  deploy_style: compressed  # nested|expanded|compact|compressed
+  compile_in_place: false   # true|false
