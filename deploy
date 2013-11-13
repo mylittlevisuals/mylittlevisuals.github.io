@@ -1,6 +1,6 @@
 #!/bin/bash
 DEPLOY_BRANCH="master"
-DEPLOY_ORIGIN="git@github.com:Zeeraw/zeeraw.github.io.git"
+DEPLOY_ORIGIN="git@github.com:mylittlevisuals/mylittlevisuals.github.io.git"
 DEPLOY_PATH="./_site"
 echo "About to deploy '$DEPLOY_PATH' to $DEPLOY_ORIGIN on $DEPLOY_BRANCH"
 read -p "Message to add with your deploy: " commit_message
